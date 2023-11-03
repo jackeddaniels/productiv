@@ -4,6 +4,7 @@ exports[`TodoForm component matches snapshot 1`] = `
 <div>
   <form
     class="NewTodoForm"
+    id="todo-form"
   >
     <div
       class="mb-3"

@@ -42,11 +42,13 @@ function EditableTodo({todo, update, remove}) {
             <div className="mb-3">
             <div className="float-end text-sm-end">
               <button
+                  id="editButton"
                   className="EditableTodo-toggle btn-link btn btn-sm"
                   onClick={toggleEdit}>
                 Edit
               </button>
               <button
+                  id="delButton"
                   className="EditableTodo-delBtn btn-link btn btn-sm text-danger"
                   onClick={handleDelete}>
                 Del

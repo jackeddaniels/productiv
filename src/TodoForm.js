@@ -34,7 +34,7 @@ function TodoForm(
    }
 
   return (
-      <form className="NewTodoForm" onSubmit={handleSubmit}>
+      <form id="todo-form" className="NewTodoForm" onSubmit={handleSubmit}>
 
         <div className="mb-3">
           <input

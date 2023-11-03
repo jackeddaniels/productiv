@@ -14,11 +14,13 @@ exports[`EditableTodoList component matches snapshot 1`] = `
         >
           <button
             class="EditableTodo-toggle btn-link btn btn-sm"
+            id="editButton"
           >
             Edit
           </button>
           <button
             class="EditableTodo-delBtn btn-link btn btn-sm text-danger"
+            id="delButton"
           >
             Del
           </button>
