@@ -17,6 +17,7 @@ function EditableTodo({todo, update, remove}) {
   const [isEditing, setIsEditing] = useState(false)
 
   /** Toggle if this is being edited */
+  //TODO: need callback pattern here
   function toggleEdit() {
     setIsEditing(!isEditing)
    }
@@ -31,7 +32,7 @@ function EditableTodo({todo, update, remove}) {
     update({...todo, ...formData})
     setIsEditing(false)
    }
-
+//TODO: Format ternary below
   return (
       <div className="EditableTodo">
 

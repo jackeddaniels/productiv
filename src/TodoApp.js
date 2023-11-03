@@ -24,7 +24,7 @@ function TodoApp({initialTodos}) {
     let newTodo = { ...todo, id: uuid() }
     setTodos(todos => [...todos, newTodo]);
   }
-
+  //TODO: update 'update' and 'remove' with callback pattern
   /** update a todo with updatedTodo */
   function update(updatedTodo) {
     setTodos(todos.map((todo) =>
@@ -42,16 +42,20 @@ function TodoApp({initialTodos}) {
         <div className="row">
 
           <div className="col-md-6">
-            {todos.length > 0 ?
-             <EditableTodoList todos={todos} update={update} remove={remove} />
-             : <span className="text-muted">You have no todos.</span>}
+            {todos.length > 0
+              ? <EditableTodoList todos={todos} update={update} remove={remove} />
+              : <span className="text-muted">You have no todos.</span>}
           </div>
 
           <div className="col-md-6">
-            {todos.length > 0 && <section className="mb-4">
-              <h3>Top Todo</h3>
-              <TopTodo todos={todos}/>
-            </section>}
+            <h3>Top Todo</h3>
+              {todos.length > 0
+              ? (
+                <section className="mb-4">
+                  <TopTodo todos={todos}/>
+                </section>
+                )
+              : <p>No top todo available.</p>}
 
             <section>
               <h3 className="mb-3">Add Nü</h3>

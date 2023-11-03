@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-
+//TODO: make note of added state in docstring
 /** Form for adding.
  *
  * Props:
@@ -9,7 +9,7 @@ import React, { useState } from "react";
  *
  * { TodoApp, EditableTodo } -> TodoForm
  */
-
+//TODO: consider moving default formdata outside of function
 function TodoForm(
   {initialFormData={description: "", priority: 1, title: ""},
    handleSave}) {
@@ -19,6 +19,7 @@ function TodoForm(
   /** Update form input. */
   function handleChange(evt) {
     const {name, value} = evt.target;
+    //TODO: convert priority to number
     setFormData({
       ...formData,
       [name]:value
